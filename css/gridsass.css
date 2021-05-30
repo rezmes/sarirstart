@@ -1,19 +1,16 @@
+@font-face {
+  font-family: "IRANSansWeb(FaNum)_Bold";
+  src: url("/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum)_Bold/IRANSansWeb(FaNum)_Bold.woff2") format("woff2");
+  src: url("/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum)_Bold/IRANSansWeb(FaNum)_Bold.woff") format("woff");
+}
 html, body {
   margin: 0;
   padding: 0;
+  font-family: "IRANSansWeb(FaNum)_Bold";
 }
 
 * {
   box-sizing: border-box;
-}
-
-.parent {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 0.5fr 3fr repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
 }
 
 .centr {
@@ -22,10 +19,18 @@ html, body {
   justify-content: center;
 }
 
+.parent {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 0.5fr minmax(150px, 3fr) 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
 .div1 {
   background: blue;
   grid-area: 1/1/2/4;
-  padding: 15px 0 15px 0;
 }
 
 .div2 {
@@ -39,7 +44,7 @@ html, body {
 }
 
 .div4 {
-  background: red;
+  background: purple;
   grid-area: 3/2/4/3;
 }
 
@@ -59,11 +64,14 @@ html, body {
 }
 
 img {
-  max-width: 100%;
+  max-width: 200px;
+  height: auto;
 }
 
 svg {
-  width: 10em;
+  width: 11rem;
+  margin: 0;
+  padding: 0;
 }
 svg path, svg polygon {
   fill: white;

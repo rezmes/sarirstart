@@ -16,51 +16,47 @@ html, body {
 .centr {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
 }
 
 .parent {
   display: grid;
   height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.5fr minmax(150px, 3fr) 1fr;
   grid-column-gap: 0;
   grid-row-gap: 0;
 }
+@media screen and (max-width: 424) {
+  .parent {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr minmax(150px, 3fr) 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+}
 
 .div1 {
   background: blue;
-  grid-area: 1/1/2/4;
+  grid-area: 1/1/2/2;
 }
 
 .div2 {
   background: green;
-  grid-area: 2/1/3/4;
+  grid-area: 2/1/2/3;
 }
 
 .div3 {
   background: red;
-  grid-area: 3/1/4/2;
+  grid-area: 3/1/3/4;
 }
 
 .div4 {
-  background: purple;
-  grid-area: 3/2/4/3;
-}
-
-.div5 {
-  background: red;
-  grid-area: 3/3/4/4;
-}
-
-.div6 {
   background: cyan;
-  grid-area: 4/1/5/4;
-}
-
-.div7 {
-  grid-area: 5/1/6/6;
-  background: #7a1d1d;
+  grid-area: 4/1/4/4;
 }
 
 img {

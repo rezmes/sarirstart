@@ -22,20 +22,14 @@ html, body {
 
 .parent {
   display: grid;
-  height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.5fr minmax(150px, 3fr) 1fr;
   grid-column-gap: 0;
   grid-row-gap: 0;
 }
-@media screen and (max-width: 424) {
+@media (min-width: 425) {
   .parent {
-    display: grid;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr minmax(150px, 3fr) 1fr;
-    grid-column-gap: 0;
-    grid-row-gap: 0;
+    height: 100vh;
   }
 }
 

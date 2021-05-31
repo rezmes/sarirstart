@@ -1,62 +1,21 @@
 $global-font-family: 'IRANSansWeb(FaNum)_Bold'
 $IranSansWeb: '/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum)_Bold'
-@font-face
-    font-family: "IRANSansWeb(FaNum)_Bold"
+@font-face font-family: "IRANSansWeb(FaNum)_Bold"
     src: url($IranSansWeb + '/IRANSansWeb(FaNum)_Bold.woff2') format('woff2')
     src: url($IranSansWeb + '/IRANSansWeb(FaNum)_Bold.woff') format('woff')
-html, body
-    margin: 0
-    padding: 0
-    font-family: $global-font-family
-    // height: 100vh
-    // width: 100vw
-*
-    box-sizing: border-box
-.centr
-    display: flex
-    align-items: center
-    justify-content: center
-    // min-width: 0
-    // min-height: 0
-    // overflow: hidden
-.parent
-    display: grid
-    height: 100vh
-    // grid-template-columns: 1fr
-    grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: 1fr .5fr minmax(150px, 3fr) 1fr
-    grid-column-gap: 0
-    grid-row-gap: 0
-
-.div1
-    background: blue
-    grid-area: 1 / 1 / 2 / 4
-.div2
-    background: green
-    grid-area: 2 / 1 / 3 / 4
-.div3
-    background: red
-    grid-area: 3 / 1 / 4 / 2
-.div4
-    background: purple
-    grid-area: 3 / 2 / 4 / 3
-.div5
-    background: red
-    grid-area: 3 / 3 / 4 / 4
-.div6
-    background: cyan
-    grid-area: 4 / 1 / 5 / 4
-.div7
-    grid-area: 5 / 1 / 6 / 6
-    background: #7a1d1d
-img
-    max-width: 200px
-    height: auto
-svg
-    width: 11rem
-    margin: 0
-    padding: 0
-    path, polygon
-        fill: white
-
-    // @import gridcss0
+@mixin mobile-screen @media screen and (max-width:424) display: grid height: auto grid-template-columns: 1fr // grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 1fr .5fr minmax(150px, 3fr) 1fr grid-column-gap: 0 grid-row-gap: 0 html,
+body margin: 0 padding: 0 font-family: $global-font-family // height: 100vh
+// width: 100vw
+* box-sizing: border-box .centr display: flex align-items: center justify-content: space-around flex-flow: row wrap // min-width: 0
+// min-height: 0
+// overflow: hidden
+.parent @include mobile-screen display: grid height: 100vh grid-template-columns: 1fr // grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 1fr .5fr minmax(150px, 3fr) 1fr grid-column-gap: 0 grid-row-gap: 0 .div1 background: blue grid-area: 1 / 1 / 2 / 2 .div2 background: green grid-area: 2 / 1 / 2 / 3 .div3 background: red grid-area: 3 / 1 / 3 / 4 // .div4
+//     background: purple
+//     grid-area: 3 / 1 / 3 / 4
+// .div5
+//     background: red
+//     grid-area: 3 / 1 / 3 / 4
+.div4 background: cyan grid-area: 4 / 1 / 4 / 4 img max-width: 200px height: auto svg width: 11rem margin: 0 padding: 0 path,
+polygon fill: white // @import gridcss0

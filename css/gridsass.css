@@ -19,48 +19,48 @@ html, body {
   justify-content: center;
 }
 
-.parent {
+.container {
   display: grid;
   height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 0.5fr minmax(150px, 3fr) 1fr;
+  grid: 1fr 0.5fr auto 1fr/1fr;
+  grid-template: [header-top] "h" [tel-top] "t" [main-top] "m" [footer-top] "f" [footer-bottom]/auto;
   grid-column-gap: 0;
   grid-row-gap: 0;
 }
 
-.div1 {
+.header {
   background: blue;
-  grid-area: 1/1/2/4;
+  grid-area: h;
 }
 
-.div2 {
+.tel {
   background: green;
-  grid-area: 2/1/3/4;
+  grid-area: t;
 }
 
-.div3 {
-  background: red;
-  grid-area: 3/1/4/2;
+.main {
+  grid-area: m;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: auto;
+  justify-content: space-around;
 }
 
-.div4 {
-  background: purple;
-  grid-area: 3/2/4/3;
+.imgblue {
+  grid-column: 1;
 }
 
-.div5 {
-  background: red;
-  grid-area: 3/3/4/4;
+.imggreen {
+  grid-column: 2;
 }
 
-.div6 {
+.imgyellow {
+  grid-column: 3;
+}
+
+.footer {
   background: cyan;
-  grid-area: 4/1/5/4;
-}
-
-.div7 {
-  grid-area: 5/1/6/6;
-  background: #7a1d1d;
+  grid-area: f;
 }
 
 img {

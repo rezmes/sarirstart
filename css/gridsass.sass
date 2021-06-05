@@ -1,3 +1,17 @@
+$flur-blue: #4AF1F2
+$flur-green: #39FF14
+$flur-yellow: #FFF300
+$white: whitesmoke
+$mainY: #F0B823
+$mainG: #1C5B20
+$mainB: #2E5077
+$olive: #868A22
+$ocean: #25564C
+$lightBlue: #4DA1A9
+$light: #D7E8BA
+$dark: #0C181D
+$bodyback: linear-gradient(-45deg, rgba($mainY,1) 0%, rgba($olive,1) 20%, rgba(39,96,32,1) 45%, rgba($mainG,1) 54%, rgba(29,91,36,1) 62%, rgba($ocean,1) 80%, rgba($mainB,1) 100%)
+
 $global-font-family: 'IRANSansWeb(FaNum)_Bold'
 $IranSansWeb: '/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum)_Bold'
 @font-face
@@ -8,37 +22,51 @@ html, body
     margin: 0
     padding: 0
     font-family: $global-font-family
-    // height: 100vh
-    // width: 100vw
+    background: $bodyback
 *
     box-sizing: border-box
+img
+    max-width: 180px
+    height: auto
+    border-radius: 50%
+    border: 3px solid
+    filter: grayscale(100%)
+    transition: .3s
+    transition-timing-function: ease
+    &:hover
+        cursor: pointer
+        transition: .5s
+        transition-timing-function: ease
+        filter: grayscale(0%)
+        box-shadow: 0 0 .5rem $white, inset 0 0 .5rem $white, 0 0 2rem , inset 0 0 2rem , 0 0 4rem , inset 0 0 4rem
+svg
+    width: 10em
+    margin: 0
+    padding: 0
+    path, polygon
+        fill: whitesmoke
+#phoneiconspan
+    margin: 0 5px
+    i
+        color: $dark
 .centr
     display: flex
     align-items: center
     justify-content: center
-    // min-width: 0
-    // min-height: 0
-    // overflow: hidden
+
 .container
     display: grid
     height: 100vh
-    // grid-template-columns: 1fr
-    // grid: [header-start] minmax(auto, 7em) [header-end tel-start] minmax(auto, 3em) [tel-end main-start] auto [main-end footer-start] .5fr [footer-end] / 1fr
     grid: minmax(auto, 7em) minmax(auto, 3em) auto .5fr / 1fr
     grid-column-gap: 0
     grid-row-gap: 0
 
 .header
-    background: blue
     grid-area: 1
 .tel
-    background: green
     grid-area: 2
 .main
     grid-area: 3
-    // display: grid
-    // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
-    // justify-items: center
     display: flex
     justify-content: space-around
     flex-wrap: wrap
@@ -47,29 +75,18 @@ html, body
         display: flex
         justify-content: center
         align-items: flex-start
-        max-height: calc( (100vh - 10.5em) / 3)
+.box
 
-// .imgblue
-//     min-width: 300px
-//      // grid-column: 1
-// .imggreen
-//     min-width: 300px
-//     // grid-column: 2
-// .imgyellow
-//     min-width: 300px
-//     // grid-column: 3
+.imgblue
+    border-color: $flur-blue
+    color: $flur-blue
+.imggreen
+    border-color: $flur-green
+    color: $flur-green
+.imgyellow
+    border-color: $flur-yellow
+    color: $flur-yellow
 .footer
-    background: cyan
     grid-area: 4
-
-img
-    max-width: 180px
-    height: auto
-svg
-    width: 10em
-    margin: 0
-    padding: 0
-    path, polygon
-        fill: whitesmoke
 
     // @import gridcss0

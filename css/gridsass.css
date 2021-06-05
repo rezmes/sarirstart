@@ -7,10 +7,44 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "IRANSansWeb(FaNum)_Bold";
+  background: linear-gradient(-45deg, #f0b823 0%, #868a22 20%, #276020 45%, #1c5b20 54%, #1d5b24 62%, #25564c 80%, #2e5077 100%);
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  max-width: 180px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+img:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  filter: grayscale(0%);
+  box-shadow: 0 0 0.5rem whitesmoke, inset 0 0 0.5rem whitesmoke, 0 0 2rem, inset 0 0 2rem, 0 0 4rem, inset 0 0 4rem;
+}
+
+svg {
+  width: 10em;
+  margin: 0;
+  padding: 0;
+}
+svg path, svg polygon {
+  fill: whitesmoke;
+}
+
+#phoneiconspan {
+  margin: 0 5px;
+}
+#phoneiconspan i {
+  color: #0C181D;
 }
 
 .centr {
@@ -28,12 +62,10 @@ html, body {
 }
 
 .header {
-  background: blue;
   grid-area: 1;
 }
 
 .tel {
-  background: green;
   grid-area: 2;
 }
 
@@ -50,21 +82,21 @@ html, body {
   align-items: flex-start;
 }
 
+.imgblue {
+  border-color: #4AF1F2;
+  color: #4AF1F2;
+}
+
+.imggreen {
+  border-color: #39FF14;
+  color: #39FF14;
+}
+
+.imgyellow {
+  border-color: #FFF300;
+  color: #FFF300;
+}
+
 .footer {
-  background: cyan;
   grid-area: 4;
-}
-
-img {
-  max-width: 180px;
-  height: auto;
-}
-
-svg {
-  width: 10em;
-  margin: 0;
-  padding: 0;
-}
-svg path, svg polygon {
-  fill: whitesmoke;
 }

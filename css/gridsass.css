@@ -22,57 +22,50 @@ html, body {
 .container {
   display: grid;
   height: 100vh;
-  grid: 1fr 0.5fr auto 1fr/1fr;
-  grid-template: [header-top] "h" [tel-top] "t" [main-top] "m" [footer-top] "f" [footer-bottom]/auto;
+  grid: minmax(auto, 7em) minmax(auto, 3em) auto 0.5fr/1fr;
   grid-column-gap: 0;
   grid-row-gap: 0;
 }
 
 .header {
   background: blue;
-  grid-area: h;
+  grid-area: 1;
 }
 
 .tel {
   background: green;
-  grid-area: t;
+  grid-area: 2;
 }
 
 .main {
-  grid-area: m;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  grid-template-rows: auto;
+  grid-area: 3;
+  display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
-
-.imgblue {
-  grid-column: 1;
-}
-
-.imggreen {
-  grid-column: 2;
-}
-
-.imgyellow {
-  grid-column: 3;
+.main div {
+  margin: 5px 3em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-height: calc( (100vh - 10.5em) / 3);
 }
 
 .footer {
   background: cyan;
-  grid-area: f;
+  grid-area: 4;
 }
 
 img {
-  max-width: 200px;
+  max-width: 180px;
   height: auto;
 }
 
 svg {
-  width: 11rem;
+  width: 10em;
   margin: 0;
   padding: 0;
 }
 svg path, svg polygon {
-  fill: white;
+  fill: whitesmoke;
 }

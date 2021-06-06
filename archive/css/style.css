@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "IRANSansWeb(FaNum)_Bold";
+  src: url("/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum)_Bold/IRANSansWeb(FaNum)_Bold.woff2") format("woff2");
+  src: url("/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum)_Bold/IRANSansWeb(FaNum)_Bold.woff") format("woff");
+}
+/* KEYFRAMES */
+body {
+  background-color: #1d2630;
+  font-family: "IRANSansWeb(FaNum)_Bold";
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+header svg {
+  width: 12rem;
+  margin: 1rem;
+}
+
+header svg path,
+header svg polygon {
+  opacity: 1;
+  fill: white;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: height .3s; */
+  position: relative;
+  height: 0;
+  transition: height 0.5s;
+  width: 58%;
+  padding: 29% 0;
+  border-radius: 50%;
+  background: #1d2630;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.15), -8px -8px 12px 0 rgba(255, 255, 255, 0.15);
+}
+
+.box:hover h2.h2watercolor {
+  color: cyan;
+}
+
+.box:hover h2.h2greencolor {
+  color: lime;
+}
+
+.box:hover h2.h2constcolor {
+  color: #ffd000;
+}
+
+.box:hover {
+  filter: grayscale(0%);
+  border-radius: 999999px 999999px 999999px 999999px;
+  position: relative;
+  margin: auto;
+  height: 150%;
+}
+
+.box .content {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 3rem;
+  height: 2rem;
+  padding: 1rem;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.box .content h2 {
+  font-size: 20px;
+  color: gray;
+  font-weight: 500;
+  line-height: 1.2rem;
+  letter-spacing: 1px;
+  padding: 0.5rem;
+  margin: 3rem 20px 3rem 20px;
+}
+
+.box:hover .content {
+  transition: opacity 0.5s ease-out 0.25s;
+  opacity: 1;
+}
+
+.box .content a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: yekan;
+  color: gray;
+  transition: color 0.3 ease;
+}
+
+.box .content a span:hover {
+  color: cyan;
+}
+
+.box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.box .imgBx:hover {
+  border-radius: 50%;
+}
+
+.box .imgBx img {
+  width: 100%;
+  max-width: 100%;
+  filter: grayscale(100%);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 3px solid gray;
+}
+
+.box .imgBx img:hover {
+  filter: grayscale(0%);
+  transition: 0.5s;
+}
+
+#bluebox:hover .watercolor {
+  filter: grayscale(0%);
+  border: 3px solid cyan;
+  box-shadow: 0 0 12px cyan;
+}
+
+#greenbox:hover .greencolor {
+  filter: grayscale(0%);
+  border: 3px solid lime;
+  box-shadow: 0 0 12px lime;
+}
+
+#yellowbox:hover .constcolor {
+  filter: grayscale(0%);
+  border: 3px solid #ffd000;
+  box-shadow: 0 0 12px #ffd000;
+}
+
+[class*=startpage] {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+#tphdrphonegreen {
+  display: flex;
+}
+
+#tphdrphonegreen > * {
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 922px) {
+  #tphdrphonegreen {
+    color: lime;
+  }
+}
+.ast-header-break-point .main-navigation ul .menu-item .menu-link {
+  border-color: rgba(100, 100, 0, 0);
+}
+
+div.ast-footer-overlay {
+  padding: 0.5rem 0;
+}
+
+.ast-col-lg-4.ast-col-md-4.ast-col-sm-12.ast-col-xs-12.footer-adv-widget.footer-adv-widget-1 {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.list-items-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.undercons h2 {
+  direction: rtl;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+}
+
+.undercons h2 p {
+  direction: ltr;
+}

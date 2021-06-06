@@ -122,6 +122,32 @@ img:hover {
   color: #FFF300;
 }
 
+.blueTyep {
+  position: absolute;
+  margin-bottom: 1em;
+}
+.blueTyep h3 {
+  color: #4AF1F2;
+}
+
+.greenTyep {
+  position: absolute;
+  bottom: 1em;
+}
+.greenTyep h3 {
+  position: absolute;
+  bottom: 1em;
+  color: #39FF14;
+}
+
+.yellowTyep {
+  position: absolute;
+  margin-bottom: 1em;
+}
+.yellowTyep h3 {
+  color: #FFF300;
+}
+
 .footer {
   grid-area: 4;
 }

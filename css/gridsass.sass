@@ -12,6 +12,8 @@ $light: #D7E8BA
 $dark: #0C181D
 $bodyback: linear-gradient(-45deg, rgba($mainY,1) 0%, rgba($olive,1) 20%, rgba(39,96,32,1) 45%, rgba($mainG,1) 54%, rgba(29,91,36,1) 62%, rgba($ocean,1) 80%, rgba($mainB,1) 100%)
 
+$imgwidth: 180px
+
 $global-font-family: 'IRANSansWeb(FaNum)_Bold'
 $IranSansWeb: '/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum)_Bold'
 @font-face
@@ -25,20 +27,7 @@ html, body
     background: $bodyback
 *
     box-sizing: border-box
-img
-    max-width: 180px
-    height: auto
-    border-radius: 50%
-    border: 3px solid
-    filter: grayscale(100%)
-    transition: .3s
-    transition-timing-function: ease
-    &:hover
-        cursor: pointer
-        transition: .5s
-        transition-timing-function: ease
-        filter: grayscale(0%)
-        box-shadow: 0 0 .5rem $white, inset 0 0 .5rem $white, 0 0 2rem , inset 0 0 2rem , 0 0 4rem , inset 0 0 4rem
+
 svg
     width: 10em
     margin: 0
@@ -75,17 +64,53 @@ svg
         display: flex
         justify-content: center
         align-items: flex-start
+img
+    max-width: $imgwidth
+    height: auto
+    border-radius: 50%
+    border: 3px solid
+    filter: grayscale(100%)
+    transition: .3s
+    transition-timing-function: ease
+    &:hover
+        cursor: pointer
+        transition: .5s
+        transition-timing-function: ease
+        filter: grayscale(0%)
+        box-shadow: 0 0 .5rem $white, inset 0 0 .5rem $white, 0 0 2rem , inset 0 0 2rem , 0 0 4rem , inset 0 0 4rem
 .box
+    transition: 0
+    border-radius: 125px
+    -webkit-border-radius: 125px
+    background: #00000000
+    cursor: pointer
+    transition: .3s
+    transition-timing-function: ease
+    height: $imgwidth
 
-.imgblue
-    border-color: $flur-blue
-    color: $flur-blue
-.imggreen
-    border-color: $flur-green
-    color: $flur-green
-.imgyellow
-    border-color: $flur-yellow
-    color: $flur-yellow
+    &:hover
+        transition: .3s
+        transition-timing-function: ease
+        // باید بشه در پارامتر ضرب کرد.
+        height: calc( 2 * 180px )
+.bluebox
+    -webkit-box-shadow: 14px 14px 28px #31656a,-14px -14px 28px #184a20
+    box-shadow: 14px 14px 28px #31656a,-14px -14px 28px #184a20
+    img
+        border-color: $flur-blue
+        color: $flur-blue
+.greenbox
+    -webkit-box-shadow: 14px 14px 28px #3d7123,-14px -14px 28px #206427
+    box-shadow: 14px 14px 28px #3d7123,-14px -14px 28px #206427
+    img
+        border-color: $flur-green
+        color: $flur-green
+.yellowbox
+    -webkit-box-shadow: 14px 14px 28px #3e631e,-14px -14px 28px #87831f
+    box-shadow: 14px 14px 28px #3e631e,-14px -14px 28px #87831f
+    img
+        border-color: $flur-yellow
+        color: $flur-yellow
 .footer
     grid-area: 4
 

@@ -14,23 +14,6 @@ html, body {
   box-sizing: border-box;
 }
 
-img {
-  max-width: 180px;
-  height: auto;
-  border-radius: 50%;
-  border: 3px solid;
-  filter: grayscale(100%);
-  transition: 0.3s;
-  transition-timing-function: ease;
-}
-img:hover {
-  cursor: pointer;
-  transition: 0.5s;
-  transition-timing-function: ease;
-  filter: grayscale(0%);
-  box-shadow: 0 0 0.5rem whitesmoke, inset 0 0 0.5rem whitesmoke, 0 0 2rem, inset 0 0 2rem, 0 0 4rem, inset 0 0 4rem;
-}
-
 svg {
   width: 10em;
   margin: 0;
@@ -82,17 +65,59 @@ svg path, svg polygon {
   align-items: flex-start;
 }
 
-.imgblue {
+img {
+  max-width: 180px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+img:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  filter: grayscale(0%);
+  box-shadow: 0 0 0.5rem whitesmoke, inset 0 0 0.5rem whitesmoke, 0 0 2rem, inset 0 0 2rem, 0 0 4rem, inset 0 0 4rem;
+}
+
+.box {
+  transition: 0;
+  border-radius: 125px;
+  -webkit-border-radius: 125px;
+  background: #00000000;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-timing-function: ease;
+  height: 180px;
+}
+.box:hover {
+  transition: 0.3s;
+  transition-timing-function: ease;
+  height: calc( 2 * 180px );
+}
+
+.bluebox {
+  box-shadow: 14px 14px 28px #31656a, -14px -14px 28px #184a20;
+}
+.bluebox img {
   border-color: #4AF1F2;
   color: #4AF1F2;
 }
 
-.imggreen {
+.greenbox {
+  box-shadow: 14px 14px 28px #3d7123, -14px -14px 28px #206427;
+}
+.greenbox img {
   border-color: #39FF14;
   color: #39FF14;
 }
 
-.imgyellow {
+.yellowbox {
+  box-shadow: 14px 14px 28px #3e631e, -14px -14px 28px #87831f;
+}
+.yellowbox img {
   border-color: #FFF300;
   color: #FFF300;
 }

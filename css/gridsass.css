@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "IRANSansWeb(FaNum)_Bold";
+  src: url("/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum)_Bold/IRANSansWeb(FaNum)_Bold.woff2") format("woff2");
+  src: url("/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum)_Bold/IRANSansWeb(FaNum)_Bold.woff") format("woff");
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "IRANSansWeb(FaNum)_Bold";
+  background: linear-gradient(-45deg, #f0b823 0%, #868a22 20%, #276020 45%, #1c5b20 54%, #1d5b24 62%, #25564c 80%, #2e5077 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+svg {
+  width: 10em;
+  margin: 0;
+  padding: 0;
+}
+svg path, svg polygon {
+  fill: whitesmoke;
+}
+
+#phoneiconspan {
+  margin: 0 5px;
+}
+#phoneiconspan i {
+  color: #0C181D;
+}
+
+.centr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid: minmax(auto, 7em) minmax(auto, 3em) auto 0.5fr/1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+.header {
+  grid-area: 1;
+}
+
+.tel {
+  grid-area: 2;
+}
+
+.main {
+  grid-area: 3;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.main div {
+  margin: 5px 3em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+img {
+  max-width: 180px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+img:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  filter: grayscale(0%);
+  box-shadow: 0 0 0.5rem whitesmoke, inset 0 0 0.5rem whitesmoke, 0 0 2rem, inset 0 0 2rem, 0 0 4rem, inset 0 0 4rem;
+}
+
+.box {
+  transition: 0;
+  border-radius: 125px;
+  -webkit-border-radius: 125px;
+  background: #00000000;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-timing-function: ease;
+  height: 180px;
+}
+.box:hover {
+  transition: 0.3s;
+  transition-timing-function: ease;
+  height: calc( 2 * 180px );
+}
+
+.bluebox {
+  box-shadow: 14px 14px 28px #31656a, -14px -14px 28px #184a20;
+}
+.bluebox img {
+  border-color: #4AF1F2;
+  color: #4AF1F2;
+}
+
+.greenbox {
+  box-shadow: 14px 14px 28px #3d7123, -14px -14px 28px #206427;
+}
+.greenbox img {
+  border-color: #39FF14;
+  color: #39FF14;
+}
+
+.yellowbox {
+  box-shadow: 14px 14px 28px #3e631e, -14px -14px 28px #87831f;
+}
+.yellowbox img {
+  border-color: #FFF300;
+  color: #FFF300;
+}
+
+.blueTyep {
+  position: absolute;
+  margin-bottom: 1em;
+}
+.blueTyep h3 {
+  color: #4AF1F2;
+}
+
+.greenTyep {
+  position: absolute;
+  bottom: 1em;
+}
+.greenTyep h3 {
+  position: absolute;
+  bottom: 1em;
+  color: #39FF14;
+}
+
+.yellowTyep {
+  position: absolute;
+  margin-bottom: 1em;
+}
+.yellowTyep h3 {
+  color: #FFF300;
+}
+
+.footer {
+  grid-area: 4;
+}

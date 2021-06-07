@@ -28,6 +28,18 @@ html, body
 *
     box-sizing: border-box
 
+.mainBlue
+    color: $mainB
+.mainGreen
+    color: $mainG
+.mainYellow
+    color: $mainY
+.flurBlue
+    color: $flur-blue
+.flurGreen
+    color: $flur-green
+.flurYellow
+    color: $flur-yellow
 svg
     width: 10em
     margin: 0
@@ -57,13 +69,16 @@ svg
 .main
     grid-area: 3
     display: flex
-    justify-content: space-around
+    justify-content: space-evenly
     flex-wrap: wrap
     div
         margin: 5px 3em
-        display: flex
-        justify-content: center
-        align-items: flex-start
+        display: grid
+        justify-items: center
+        align-content: space-between
+
+a
+    text-decoration: none
 img
     max-width: $imgwidth
     height: auto
@@ -87,12 +102,19 @@ img
     transition: .3s
     transition-timing-function: ease
     height: $imgwidth
-
+    span, span h3
+        position: relative
+        bottom: 1em
+        margin-top: -1em
+        transition: .3s
+        opacity: 0
     &:hover
         transition: .3s
         transition-timing-function: ease
         // باید بشه در پارامتر ضرب کرد.
-        height: calc( 2 * 180px )
+        height: calc( 1.8 * 180px )
+        span, span h3
+            opacity: 1
 .bluebox
     -webkit-box-shadow: 14px 14px 28px #31656a,-14px -14px 28px #184a20
     box-shadow: 14px 14px 28px #31656a,-14px -14px 28px #184a20
@@ -111,27 +133,47 @@ img
     img
         border-color: $flur-yellow
         color: $flur-yellow
-.blueTyep
-    position: absolute
-    margin-bottom: 1em
-    h3
-        color: $flur-blue
-
-.greenTyep
-    position: absolute
-    bottom: 1em
-    h3
-        position: absolute
-        bottom: 1em
-        color: $flur-green
-
-.yellowTyep
-    position: absolute
-    margin-bottom: 1em
-    h3
-        color: $flur-yellow
 
 .footer
     grid-area: 4
 
-    // @import gridcss0
+.underconstructiondiv
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    span h1
+        margin: 0
+        padding: 0
+        font-weight: bolder
+        // text-align: center
+        font-size: 10vw
+#layer1
+    color: rgba($white, 0.075)
+    -webkit-text-fill-color: rgba($white, 0.075)
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: rgba(255,255,255,0.4)
+        // text-shadow: 2px 8px 8px rgba(0, 0, 0, 0.3)
+    text-shadow: 2px 2px 5px rgba(35,35,35,0.3)
+#layer2
+    color: rgba($white, 0.075)
+    -webkit-text-fill-color: rgba($white, 0.075)
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: rgba(255,255,255,0.4)
+    text-shadow: 2px 8px 8px rgba(0, 0, 0, 0.3)
+    text-shadow: 2px 2px 5px rgba(35,35,35,0.3)
+
+        // backdrop-filter: blur(5px)
+
+// .glass-container
+
+//     backdrop-filter: blur(5px)
+//     background-color: rgba(0,191,255, 0.075)
+//     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px
+//     border: 2px rgba(255,255,255,0.4) solid
+//     border-bottom: 2px rgba(40,40,40,0.35) solid
+//     border-right: 2px rgba(40,40,40,0.35) solid

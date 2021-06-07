@@ -14,6 +14,30 @@ html, body {
   box-sizing: border-box;
 }
 
+.mainBlue {
+  color: #2E5077;
+}
+
+.mainGreen {
+  color: #1C5B20;
+}
+
+.mainYellow {
+  color: #F0B823;
+}
+
+.flurBlue {
+  color: #4AF1F2;
+}
+
+.flurGreen {
+  color: #39FF14;
+}
+
+.flurYellow {
+  color: #FFF300;
+}
+
 svg {
   width: 10em;
   margin: 0;
@@ -55,14 +79,18 @@ svg path, svg polygon {
 .main {
   grid-area: 3;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .main div {
   margin: 5px 3em;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid;
+  justify-items: center;
+  align-content: space-between;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -92,10 +120,20 @@ img:hover {
   transition-timing-function: ease;
   height: 180px;
 }
+.box span, .box span h3 {
+  position: relative;
+  bottom: 1em;
+  margin-top: -1em;
+  transition: 0.3s;
+  opacity: 0;
+}
 .box:hover {
   transition: 0.3s;
   transition-timing-function: ease;
-  height: calc( 2 * 180px );
+  height: calc( 1.8 * 180px );
+}
+.box:hover span, .box:hover span h3 {
+  opacity: 1;
 }
 
 .bluebox {
@@ -122,32 +160,40 @@ img:hover {
   color: #FFF300;
 }
 
-.blueTyep {
-  position: absolute;
-  margin-bottom: 1em;
-}
-.blueTyep h3 {
-  color: #4AF1F2;
-}
-
-.greenTyep {
-  position: absolute;
-  bottom: 1em;
-}
-.greenTyep h3 {
-  position: absolute;
-  bottom: 1em;
-  color: #39FF14;
-}
-
-.yellowTyep {
-  position: absolute;
-  margin-bottom: 1em;
-}
-.yellowTyep h3 {
-  color: #FFF300;
-}
-
 .footer {
   grid-area: 4;
+}
+
+.underconstructiondiv {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.underconstructiondiv span h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: bolder;
+  font-size: 10vw;
+}
+
+#layer1 {
+  color: rgba(245, 245, 245, 0.075);
+  -webkit-text-fill-color: rgba(245, 245, 245, 0.075);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+  text-shadow: 2px 2px 5px rgba(35, 35, 35, 0.3);
+}
+
+#layer2 {
+  color: rgba(245, 245, 245, 0.075);
+  -webkit-text-fill-color: rgba(245, 245, 245, 0.075);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+  text-shadow: 2px 8px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 5px rgba(35, 35, 35, 0.3);
 }

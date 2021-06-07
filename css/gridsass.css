@@ -7,9 +7,28 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "IRANSansWeb(FaNum)_Bold";
-  background: linear-gradient(to top left, #f0b823 0%, #868a22 10%, #276020 35%, #1c5b20 44%, #1d5b24 62%, #25564c 80%, #2e5077 100%);
+  background: linear-gradient(270deg, #F0B823, #1C5B20, #2E5077);
+  background-size: 600% 600%;
+  -webkit-animation: BGflow 30s ease infinite;
+  animation: BGflow 30s ease infinite;
 }
 
+@-webkit-keyframes BGflow {
+  background-position: 0% 50%;
+  background-position: 100% 50%;
+  background-position: 0% 50%;
+}
+@keyframes BGflow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 * {
   box-sizing: border-box;
 }

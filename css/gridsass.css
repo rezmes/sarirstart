@@ -154,6 +154,7 @@ img:hover {
 }
 
 .box {
+  z-index: 10;
   transition: 0;
   border-radius: 125px;
   -webkit-border-radius: 125px;
@@ -164,6 +165,7 @@ img:hover {
   height: 180px;
 }
 .box span, .box span h3 {
+  z-index: 1;
   position: relative;
   bottom: 1em;
   margin-top: -1em;
@@ -208,6 +210,7 @@ img:hover {
 }
 
 .underconstructiondiv {
+  z-index: 20;
   position: absolute;
   top: 0;
   bottom: 0;

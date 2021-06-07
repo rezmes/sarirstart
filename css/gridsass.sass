@@ -146,6 +146,7 @@ img
         filter: grayscale(0%)
         box-shadow: 0 0 .5rem $white, inset 0 0 .5rem $white, 0 0 2rem , inset 0 0 2rem , 0 0 4rem , inset 0 0 4rem
 .box
+    z-index: 10
     transition: 0
     border-radius: 125px
     -webkit-border-radius: 125px
@@ -155,6 +156,7 @@ img
     transition-timing-function: ease
     height: $imgwidth
     span, span h3
+        z-index: 1
         position: relative
         bottom: 1em
         margin-top: -1em
@@ -190,6 +192,7 @@ img
     grid-area: 4
 
 .underconstructiondiv
+    z-index: 20
     position: absolute
     top: 0
     bottom: 0
